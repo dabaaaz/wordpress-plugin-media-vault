@@ -790,7 +790,7 @@ function mgjp_mv_upload_dir( $path = '', $in_url = false ) {
 function mgjp_mv_get_the_rewrite_rules() {
 
   $upload       = wp_upload_dir();
-  $uploads_path = str_replace( site_url( '/' ), '', $upload['baseurl'] );
+  $uploads_path = str_replace( home_url( '/' ), '', $upload['baseurl'] );
 
   // if is multisite add allowance for '/sites/ID' folders in uploads path
   if ( is_multisite() )
